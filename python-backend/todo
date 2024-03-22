@@ -1,0 +1,7 @@
+1 Theory + NLP concepts
+    -steaming
+    -tokenization
+    -bag of words
+2 Create training data
+3 PyTorch model and training
+4 Save/load and implement the chat
