@@ -106,4 +106,18 @@ if __name__ == '__main__':
         if (epoch+1)%100 == 0:
             print(f'epoch {epoch+1}/{num_epochs}, loss = {loss.item():.4f}')
 
-    print(f'final loss, loss={loss.item():.4f}')
+    # Save
+    data = {
+        "model_state": model.state_dict(),
+        "input_size": input_size,
+        "hidden_size": hidden_size,
+        "output_size": output_size,
+        "all_words": all_words,
+        "tags": tags
+    }
+
+    FILE = "data.pth"
+    torch.save(data, FILE)
+
+    print(f'Training complete. File saved to {FILE}')
+    
