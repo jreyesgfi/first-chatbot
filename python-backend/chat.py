@@ -46,6 +46,6 @@ while True:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 answer= random.choice(intent['responses'])
-                print(f"{bot_name}: {answer}")
+                print(f"{bot_name}: {answer} ({prob.item()*100:.2f}%)")
     else:
         print(f"{bot_name}: I do not understand...")
